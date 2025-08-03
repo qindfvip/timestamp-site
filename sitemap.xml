@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:8000/</loc>
+    <loc>http://unixtimestamp.le-ai.top/</loc>
     <lastmod>2023-05-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-        <loc>http://localhost:8000/about.html</loc>
+        <loc>http://unixtimestamp.le-ai.top/about.html</loc>
         <lastmod>2023-05-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://localhost:8000/batch-conversion.html</loc>
+        <loc>http://unixtimestamp.le-ai.top/batch-conversion.html</loc>
         <lastmod>2023-05-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>http://localhost:8000/time-difference.html</loc>
+        <loc>http://unixtimestamp.le-ai.top/time-difference.html</loc>
         <lastmod>2023-05-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>http://localhost:8000/historical-time.html</loc>
+        <loc>http://unixtimestamp.le-ai.top/historical-time.html</loc>
         <lastmod>2023-05-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://localhost:8000/api-documentation.html</loc>
+        <loc>http://unixtimestamp.le-ai.top/api-documentation.html</loc>
         <lastmod>2023-05-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.4</priority>

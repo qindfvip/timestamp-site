@@ -58,7 +58,7 @@ app.get('/api/current-timestamp', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at http://unixtimestamp.le-ai.top:${port}`);
 });
 ```
 
@@ -141,7 +141,7 @@ if __name__ == '__main__':
 
 ## 4. Usage Instructions
 
-After deploying the API, you need to update the example code in the API documentation page, replacing `http://localhost:8000` with your actual API address.
+After deploying the API, you need to update the example code in the API documentation page, replacing `http://unixtimestamp.le-ai.top` with your actual API address.
 
 For example, if you deploy the API to `https://api.example.com`, the API call will become:
 
