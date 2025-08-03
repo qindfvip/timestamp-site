@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Time difference calculation tool, calculates the time difference between two time points, supporting Unix timestamp and date time formats.">
+    <meta name="description"
+        content="Time difference calculation tool, calculates the time difference between two time points, supporting Unix timestamp and date time formats.">
     <meta name="keywords" content="time difference,time calculation,Unix timestamp,date time,time tool,developer tool">
     <title>Time Difference Calculation Tool</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -20,6 +22,7 @@
     }
     </script>
 </head>
+
 <body class="bg-gray-100">
     <nav class="bg-white shadow-md mb-4">
         <div class="container mx-auto px-4">
@@ -37,8 +40,10 @@
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-toggle" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -46,22 +51,32 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="batch-conversion.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch Conversion</a>
-                <a href="time-difference.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time Difference</a>
-                <a href="historical-time.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical Time</a>
-                <a href="api-documentation.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="batch-conversion.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch
+                    Conversion</a>
+                <a href="time-difference.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time
+                    Difference</a>
+                <a href="historical-time.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical
+                    Time</a>
+                <a href="api-documentation.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
+                <a href="about.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
             </div>
         </div>
     </nav>
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center mb-8">Time Difference Calculation Tool</h1>
-        
+
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <p class="text-gray-700 mb-4">The time difference calculation feature allows you to calculate the time difference between two time points. You can input Unix timestamp or date time format.</p>
+            <p class="text-gray-700 mb-4">The time difference calculation feature allows you to calculate the time
+                difference between two time points. You can input Unix timestamp or date time format.</p>
         </div>
-        
+
         <!-- Time Difference Calculation -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 class="text-xl font-semibold mb-4">Time Difference Calculation</h2>
@@ -70,32 +85,52 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="startTime">
                         Start Time
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="startTime" type="text" placeholder="Unix timestamp or date time">
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="startTime" type="text" placeholder="Unix timestamp or date time">
                 </div>
                 <div>
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="endTime">
                         End Time
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="endTime" type="text" placeholder="Unix timestamp or date time">
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="endTime" type="text" placeholder="Unix timestamp or date time">
                 </div>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="timeDifference">
                     Time Difference
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="timeDifference" type="text" placeholder="Time difference result" readonly>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="timeDifference" type="text" placeholder="Time difference result" readonly>
             </div>
             <div class="flex flex-col sm:flex-row sm:space-x-2">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0" type="button" id="calculateDifference">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0"
+                    type="button" id="calculateDifference">
                     Calculate Time Difference
                 </button>
-                <button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" data-target="#timeDifference">
+                <button
+                    class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button" data-target="#timeDifference">
                     Copy Result
                 </button>
             </div>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY3MD7371V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PY3MD7371V');
+    </script>
 </body>
+
 </html>

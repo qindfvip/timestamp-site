@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Historical time query tool, queries timestamps of common historical events.">
-    <meta name="keywords" content="historical time,time query,Unix timestamp,historical events,time tool,developer tool">
+    <meta name="keywords"
+        content="historical time,time query,Unix timestamp,historical events,time tool,developer tool">
     <title>Historical Time Query Tool</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,6 +22,7 @@
     }
     </script>
 </head>
+
 <body class="bg-gray-100">
     <nav class="bg-white shadow-md mb-4">
         <div class="container mx-auto px-4">
@@ -37,8 +40,10 @@
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-toggle" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -46,22 +51,32 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="batch-conversion.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch Conversion</a>
-                <a href="time-difference.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time Difference</a>
-                <a href="historical-time.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical Time</a>
-                <a href="api-documentation.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="batch-conversion.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch
+                    Conversion</a>
+                <a href="time-difference.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time
+                    Difference</a>
+                <a href="historical-time.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical
+                    Time</a>
+                <a href="api-documentation.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
+                <a href="about.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
             </div>
         </div>
     </nav>
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center mb-8">Historical Time Query Tool</h1>
-        
+
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <p class="text-gray-700 mb-4">This tool provides a query function for timestamps of common historical events, helping developers quickly obtain timestamps for specific historical events.</p>
+            <p class="text-gray-700 mb-4">This tool provides a query function for timestamps of common historical
+                events, helping developers quickly obtain timestamps for specific historical events.</p>
         </div>
-        
+
         <!-- Historical Time Query -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 class="text-xl font-semibold mb-4">Historical Time Query</h2>
@@ -69,7 +84,9 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="historicalEvent">
                     Select Historical Event
                 </label>
-                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="historicalEvent">
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="historicalEvent">
                     <option value="">Please select a historical event</option>
                     <option value="unixEpoch">Unix Epoch (1970-01-01 00:00:00 UTC)</option>
                     <option value="worldWar2End">End of World War II (1945-09-02 00:00:00 UTC)</option>
@@ -82,13 +99,17 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="historicalTimestamp">
                     Unix Timestamp
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="historicalTimestamp" type="text" readonly>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="historicalTimestamp" type="text" readonly>
             </div>
-            <button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" data-target="#historicalTimestamp">
+            <button
+                class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button" data-target="#historicalTimestamp">
                 Copy Timestamp
             </button>
         </div>
-        
+
         <!-- Common Historical Times -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 class="text-xl font-semibold mb-4">Common Historical Times</h2>
@@ -107,38 +128,58 @@
                             <td class="py-2 px-4 border-b">Unix Epoch</td>
                             <td class="py-2 px-4 border-b">1970-01-01 00:00:00 UTC</td>
                             <td class="py-2 px-4 border-b">0</td>
-                            <td class="py-2 px-4 border-b"><button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs" data-text="0">Copy</button></td>
+                            <td class="py-2 px-4 border-b"><button
+                                    class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs"
+                                    data-text="0">Copy</button></td>
                         </tr>
                         <tr>
                             <td class="py-2 px-4 border-b">End of World War II</td>
                             <td class="py-2 px-4 border-b">1945-09-02 00:00:00 UTC</td>
                             <td class="py-2 px-4 border-b">-770618880</td>
-                            <td class="py-2 px-4 border-b"><button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs" data-text="-770618880">Copy</button></td>
+                            <td class="py-2 px-4 border-b"><button
+                                    class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs"
+                                    data-text="-770618880">Copy</button></td>
                         </tr>
                         <tr>
                             <td class="py-2 px-4 border-b">First Moon Landing</td>
                             <td class="py-2 px-4 border-b">1969-07-20 20:17:40 UTC</td>
                             <td class="py-2 px-4 border-b">-14159040</td>
-                            <td class="py-2 px-4 border-b"><button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs" data-text="-14159040">Copy</button></td>
+                            <td class="py-2 px-4 border-b"><button
+                                    class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs"
+                                    data-text="-14159040">Copy</button></td>
                         </tr>
                         <tr>
                             <td class="py-2 px-4 border-b">Birth of the World Wide Web</td>
                             <td class="py-2 px-4 border-b">1989-03-12 00:00:00 UTC</td>
                             <td class="py-2 px-4 border-b">605721600</td>
-                            <td class="py-2 px-4 border-b"><button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs" data-text="605721600">Copy</button></td>
+                            <td class="py-2 px-4 border-b"><button
+                                    class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs"
+                                    data-text="605721600">Copy</button></td>
                         </tr>
                         <tr>
                             <td class="py-2 px-4 border-b">Millennium</td>
                             <td class="py-2 px-4 border-b">2000-01-01 00:00:00 UTC</td>
                             <td class="py-2 px-4 border-b">946684800</td>
-                            <td class="py-2 px-4 border-b"><button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs" data-text="946684800">Copy</button></td>
+                            <td class="py-2 px-4 border-b"><button
+                                    class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded text-xs"
+                                    data-text="946684800">Copy</button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY3MD7371V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PY3MD7371V');
+    </script>
 </body>
+
 </html>

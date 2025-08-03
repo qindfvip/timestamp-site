@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
 </head>
+
 <body class="bg-gray-100">
     <nav class="bg-white shadow-md mb-4">
         <div class="container mx-auto px-4">
@@ -27,8 +29,10 @@
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-toggle" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -36,36 +40,47 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="batch-conversion.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch Conversion</a>
-                <a href="time-difference.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time Difference</a>
-                <a href="historical-time.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical Time</a>
-                <a href="api-documentation.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="batch-conversion.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch
+                    Conversion</a>
+                <a href="time-difference.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time
+                    Difference</a>
+                <a href="historical-time.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical
+                    Time</a>
+                <a href="api-documentation.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
+                <a href="about.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
             </div>
         </div>
     </nav>
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center mb-8">About Unix Timestamp Conversion Tool</h1>
-        
+
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 class="text-xl font-semibold mb-4">What is Unix Timestamp?</h2>
-            <p class="mb-4">Unix timestamp is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds. It is a time representation used in Unix systems and many other operating systems.</p>
-            
+            <p class="mb-4">Unix timestamp is the number of seconds that have elapsed since January 1, 1970 (midnight
+                UTC/GMT), not counting leap seconds. It is a time representation used in Unix systems and many other
+                operating systems.</p>
+
             <h2 class="text-xl font-semibold mb-4">Tool Features</h2>
             <ul class="list-disc list-inside mb-4">
                 <li>Timestamp to Date Time: Convert Unix timestamp to readable date time format</li>
                 <li>Date Time to Timestamp: Convert date time to Unix timestamp</li>
                 <li>Real-time Timestamp: Get the current Unix timestamp</li>
             </ul>
-            
+
             <h2 class="text-xl font-semibold mb-4">How to Use</h2>
             <ol class="list-decimal list-inside mb-4">
                 <li>Enter the timestamp or date time you want to convert on the homepage</li>
                 <li>Click the corresponding conversion button</li>
                 <li>View the conversion result, you can quickly copy the result using the copy button</li>
             </ol>
-            
+
             <h2 class="text-xl font-semibold mb-4">Why Use Unix Timestamp?</h2>
             <ul class="list-disc list-inside mb-4">
                 <li>Unified Standard: Unix timestamp is a globally recognized time representation</li>
@@ -73,10 +88,22 @@
                 <li>Cross-platform Compatibility: Almost all programming languages support timestamps</li>
             </ul>
         </div>
-        
+
         <div class="text-center">
-            <a href="index.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Return to Home</a>
+            <a href="index.html"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Return
+                to Home</a>
         </div>
     </div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY3MD7371V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PY3MD7371V');
+    </script>
 </body>
+
 </html>

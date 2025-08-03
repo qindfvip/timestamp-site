@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Batch Unix timestamp conversion tool, supporting batch timestamp to date conversion and batch date to timestamp conversion.">
-    <meta name="keywords" content="Unix timestamp,timestamp conversion,date conversion,time tool,developer tool,batch conversion">
+    <meta name="description"
+        content="Batch Unix timestamp conversion tool, supporting batch timestamp to date conversion and batch date to timestamp conversion.">
+    <meta name="keywords"
+        content="Unix timestamp,timestamp conversion,date conversion,time tool,developer tool,batch conversion">
     <title>Batch Unix Timestamp Conversion Tool</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,6 +23,7 @@
     }
     </script>
 </head>
+
 <body class="bg-gray-100">
     <nav class="bg-white shadow-md mb-4">
         <div class="container mx-auto px-4">
@@ -37,8 +41,10 @@
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-toggle" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -46,22 +52,32 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="batch-conversion.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch Conversion</a>
-                <a href="time-difference.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time Difference</a>
-                <a href="historical-time.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical Time</a>
-                <a href="api-documentation.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="batch-conversion.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch
+                    Conversion</a>
+                <a href="time-difference.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time
+                    Difference</a>
+                <a href="historical-time.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical
+                    Time</a>
+                <a href="api-documentation.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
+                <a href="about.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
             </div>
         </div>
     </nav>
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center mb-8">Batch Unix Timestamp Conversion Tool</h1>
-        
+
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <p class="text-gray-700 mb-4">The batch conversion feature allows you to convert multiple timestamps or date times at once. Please enter your data in the text area below, one value per line.</p>
+            <p class="text-gray-700 mb-4">The batch conversion feature allows you to convert multiple timestamps or date
+                times at once. Please enter your data in the text area below, one value per line.</p>
         </div>
-        
+
         <!-- Batch Timestamp to Date -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 class="text-xl font-semibold mb-4">Batch Timestamp to Date Time</h2>
@@ -69,24 +85,32 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="batchTimestamps">
                     Unix Timestamp List (One per line)
                 </label>
-                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="batchTimestamps" rows="5" placeholder="Please enter Unix timestamps, one per line"></textarea>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="batchTimestamps" rows="5" placeholder="Please enter Unix timestamps, one per line"></textarea>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="batchDatetimes">
                     Date Time List
                 </label>
-                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="batchDatetimes" rows="5" placeholder="Converted date times" readonly></textarea>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="batchDatetimes" rows="5" placeholder="Converted date times" readonly></textarea>
             </div>
             <div class="flex flex-col sm:flex-row sm:space-x-2">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0" type="button" id="convertBatchToDatetime">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2 sm:mb-0"
+                    type="button" id="convertBatchToDatetime">
                     Batch Convert
                 </button>
-                <button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" data-target="#batchDatetimes">
+                <button
+                    class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button" data-target="#batchDatetimes">
                     Copy Results
                 </button>
             </div>
         </div>
-        
+
         <!-- Batch Date to Timestamp -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 class="text-xl font-semibold mb-4">Batch Date Time to Timestamp</h2>
@@ -94,23 +118,42 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="batchDatetimesInput">
                     Date Time List (One per line)
                 </label>
-                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="batchDatetimesInput" rows="5" placeholder="Please enter date times, one per line, format: YYYY-MM-DD HH:MM:SS"></textarea>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="batchDatetimesInput" rows="5"
+                    placeholder="Please enter date times, one per line, format: YYYY-MM-DD HH:MM:SS"></textarea>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="batchTimestampsOutput">
                     Unix Timestamp List
                 </label>
-                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="batchTimestampsOutput" rows="5" placeholder="Converted timestamps" readonly></textarea>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="batchTimestampsOutput" rows="5" placeholder="Converted timestamps" readonly></textarea>
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="convertBatchToTimestamp">
+            <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button" id="convertBatchToTimestamp">
                 Batch Convert
             </button>
-            <button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2" type="button" data-target="#batchTimestampsOutput">
+            <button
+                class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2"
+                type="button" data-target="#batchTimestampsOutput">
                 Copy Results
             </button>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY3MD7371V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PY3MD7371V');
+    </script>
 </body>
+
 </html>

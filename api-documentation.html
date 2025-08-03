@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Unix Timestamp Conversion Tool API documentation, providing APIs for converting timestamps to date-time and date-time to timestamps.">
+    <meta name="description"
+        content="Unix Timestamp Conversion Tool API documentation, providing APIs for converting timestamps to date-time and date-time to timestamps.">
     <meta name="keywords" content="Unix timestamp,API interface,timestamp conversion,date-time,developer tool">
     <title>API Documentation</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -21,6 +23,7 @@
     }
     </script>
 </head>
+
 <body class="bg-gray-100">
     <nav class="bg-white shadow-md mb-4">
         <div class="container mx-auto px-4">
@@ -38,8 +41,10 @@
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-toggle" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -47,82 +52,97 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="batch-conversion.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch Conversion</a>
-                <a href="time-difference.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time Difference</a>
-                <a href="historical-time.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical Time</a>
-                <a href="api-documentation.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="batch-conversion.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch
+                    Conversion</a>
+                <a href="time-difference.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time
+                    Difference</a>
+                <a href="historical-time.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical
+                    Time</a>
+                <a href="api-documentation.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
+                <a href="about.html"
+                    class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
             </div>
         </div>
     </nav>
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center mb-8">API Documentation</h1>
-        
+
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <p class="text-gray-700 mb-4">Our Unix Timestamp Conversion Tool provides a series of API interfaces to help developers integrate timestamp conversion functionality into their applications.</p>
+            <p class="text-gray-700 mb-4">Our Unix Timestamp Conversion Tool provides a series of API interfaces to help
+                developers integrate timestamp conversion functionality into their applications.</p>
         </div>
-        
+
         <!-- API Interface List -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 class="text-xl font-semibold mb-4">API Interface List</h2>
-            
+
             <!-- Timestamp to Date-Time Interface -->
-    <div class="border-b border-gray-200 pb-4 mb-4">
-        <h3 class="text-lg font-medium mb-2">Timestamp to Date-Time</h3>
-        <p class="text-gray-700 mb-2"><strong>Endpoint:</strong> <code class="bg-gray-100 px-2 py-1 rounded">/api/timestamp-to-datetime</code></p>
-        <p class="text-gray-700 mb-2"><strong>Method:</strong> GET</p>
-        <p class="text-gray-700 mb-2"><strong>Parameters:</strong></p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-            <li><code class="bg-gray-100 px-2 py-1 rounded">timestamp</code> - Unix timestamp (required)</li>
-            <li><code class="bg-gray-100 px-2 py-1 rounded">timezone</code> - Timezone (optional, defaults to user's local timezone)</li>
-        </ul>
-        <p class="text-gray-700 mb-2"><strong>Response Format:</strong> JSON</p>
-        <p class="text-gray-700 mb-2"><strong>Response Example:</strong></p>
-        <pre class="bg-gray-100 p-4 rounded overflow-x-auto"><code>{
+            <div class="border-b border-gray-200 pb-4 mb-4">
+                <h3 class="text-lg font-medium mb-2">Timestamp to Date-Time</h3>
+                <p class="text-gray-700 mb-2"><strong>Endpoint:</strong> <code
+                        class="bg-gray-100 px-2 py-1 rounded">/api/timestamp-to-datetime</code></p>
+                <p class="text-gray-700 mb-2"><strong>Method:</strong> GET</p>
+                <p class="text-gray-700 mb-2"><strong>Parameters:</strong></p>
+                <ul class="list-disc list-inside text-gray-700 mb-2">
+                    <li><code class="bg-gray-100 px-2 py-1 rounded">timestamp</code> - Unix timestamp (required)</li>
+                    <li><code class="bg-gray-100 px-2 py-1 rounded">timezone</code> - Timezone (optional, defaults to
+                        user's local timezone)</li>
+                </ul>
+                <p class="text-gray-700 mb-2"><strong>Response Format:</strong> JSON</p>
+                <p class="text-gray-700 mb-2"><strong>Response Example:</strong></p>
+                <pre class="bg-gray-100 p-4 rounded overflow-x-auto"><code>{
   "timestamp": 1609459200,
   "datetime": "2021-01-01 08:00:00",
   "timezone": "Asia/Shanghai"
 }</code></pre>
-    </div>
-            
+            </div>
+
             <!-- Date-Time to Timestamp Interface -->
-    <div class="border-b border-gray-200 pb-4 mb-4">
-        <h3 class="text-lg font-medium mb-2">Date-Time to Timestamp</h3>
-        <p class="text-gray-700 mb-2"><strong>Endpoint:</strong> <code class="bg-gray-100 px-2 py-1 rounded">/api/datetime-to-timestamp</code></p>
-        <p class="text-gray-700 mb-2"><strong>Method:</strong> GET</p>
-        <p class="text-gray-700 mb-2"><strong>Parameters:</strong></p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-            <li><code class="bg-gray-100 px-2 py-1 rounded">datetime</code> - Date-Time (required, format: YYYY-MM-DD HH:MM:SS)</li>
-        </ul>
-        <p class="text-gray-700 mb-2"><strong>Response Format:</strong> JSON</p>
-        <p class="text-gray-700 mb-2"><strong>Response Example:</strong></p>
-        <pre class="bg-gray-100 p-4 rounded overflow-x-auto"><code>{
+            <div class="border-b border-gray-200 pb-4 mb-4">
+                <h3 class="text-lg font-medium mb-2">Date-Time to Timestamp</h3>
+                <p class="text-gray-700 mb-2"><strong>Endpoint:</strong> <code
+                        class="bg-gray-100 px-2 py-1 rounded">/api/datetime-to-timestamp</code></p>
+                <p class="text-gray-700 mb-2"><strong>Method:</strong> GET</p>
+                <p class="text-gray-700 mb-2"><strong>Parameters:</strong></p>
+                <ul class="list-disc list-inside text-gray-700 mb-2">
+                    <li><code class="bg-gray-100 px-2 py-1 rounded">datetime</code> - Date-Time (required, format:
+                        YYYY-MM-DD HH:MM:SS)</li>
+                </ul>
+                <p class="text-gray-700 mb-2"><strong>Response Format:</strong> JSON</p>
+                <p class="text-gray-700 mb-2"><strong>Response Example:</strong></p>
+                <pre class="bg-gray-100 p-4 rounded overflow-x-auto"><code>{
   "datetime": "2021-01-01 08:00:00",
   "timestamp": 1609459200
 }</code></pre>
-    </div>
-            
+            </div>
+
             <!-- Get Current Timestamp Interface -->
-    <div>
-        <h3 class="text-lg font-medium mb-2">Get Current Timestamp</h3>
-        <p class="text-gray-700 mb-2"><strong>Endpoint:</strong> <code class="bg-gray-100 px-2 py-1 rounded">/api/current-timestamp</code></p>
-        <p class="text-gray-700 mb-2"><strong>Method:</strong> GET</p>
-        <p class="text-gray-700 mb-2"><strong>Parameters:</strong> None</p>
-        <p class="text-gray-700 mb-2"><strong>Response Format:</strong> JSON</p>
-        <p class="text-gray-700 mb-2"><strong>Response Example:</strong></p>
-        <pre class="bg-gray-100 p-4 rounded overflow-x-auto"><code>{
+            <div>
+                <h3 class="text-lg font-medium mb-2">Get Current Timestamp</h3>
+                <p class="text-gray-700 mb-2"><strong>Endpoint:</strong> <code
+                        class="bg-gray-100 px-2 py-1 rounded">/api/current-timestamp</code></p>
+                <p class="text-gray-700 mb-2"><strong>Method:</strong> GET</p>
+                <p class="text-gray-700 mb-2"><strong>Parameters:</strong> None</p>
+                <p class="text-gray-700 mb-2"><strong>Response Format:</strong> JSON</p>
+                <p class="text-gray-700 mb-2"><strong>Response Example:</strong></p>
+                <pre class="bg-gray-100 p-4 rounded overflow-x-auto"><code>{
   "timestamp": 1609459200,
   "datetime": "2021-01-01 08:00:00"
 }</code></pre>
-    </div>
+            </div>
         </div>
-        
+
         <!-- Usage Examples -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 class="text-xl font-semibold mb-4">Usage Examples</h2>
             <p class="text-gray-700 mb-4">Here are some examples of using the API interfaces:</p>
-            
+
             <!-- JavaScript示例 -->
             <div class="mb-4">
                 <h3 class="text-lg font-medium mb-2">JavaScript Example</h3>
@@ -141,7 +161,7 @@ fetch('/api/current-timestamp')
   .then(response => response.json())
   .then(data => console.log(data));</code></pre>
             </div>
-            
+
             <!-- Python示例 -->
             <div>
                 <h3 class="text-lg font-medium mb-2">Python Example</h3>
@@ -161,5 +181,15 @@ print(response.json())</code></pre>
             </div>
         </div>
     </div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY3MD7371V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PY3MD7371V');
+    </script>
 </body>
+
 </html>
