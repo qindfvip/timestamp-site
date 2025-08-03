@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Unix timestamp conversion tool, supporting timestamp to date conversion and date to timestamp conversion, convenient for developers and system administrators.">
+    <meta name="keywords" content="Unix timestamp,timestamp conversion,date conversion,time tool,developer tool">
+    <title>Unix Timestamp Conversion Tool - Online Timestamp Converter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Unix Timestamp Conversion Tool",
+      "description": "Free Unix timestamp conversion tool, supporting timestamp to date conversion and date to timestamp conversion, convenient for developers and system administrators.",
+      "url": "http://localhost:8000/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any"
+    }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md mb-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-blue-600">Unix Timestamp Conversion Tool</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="batch-conversion.html" class="text-gray-700 hover:text-blue-600">Batch Conversion</a>
+                    <a href="time-difference.html" class="text-gray-700 hover:text-blue-600">Time Difference</a>
+                    <a href="historical-time.html" class="text-gray-700 hover:text-blue-600">Historical Time</a>
+                    <a href="api-documentation.html" class="text-gray-700 hover:text-blue-600">API</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="batch-conversion.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Batch Conversion</a>
+                <a href="time-difference.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Time Difference</a>
+                <a href="historical-time.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Historical Time</a>
+                <a href="api-documentation.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">API</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Unix Timestamp Conversion Tool</h1>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <p class="text-gray-700 mb-4">Unix timestamp is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds. This tool provides three common Unix timestamp conversion functions:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>Timestamp to Date Time: Convert Unix timestamp to readable date time format</li>
+                <li>Date Time to Timestamp: Convert date time to Unix timestamp</li>
+                <li>Real-time Timestamp: Get the current Unix timestamp</li>
+            </ul>
+            <p class="text-gray-700">How to use: Enter the timestamp or date time you want to convert in the corresponding input box, click the convert button to get the result, and click the copy button to quickly copy the result.</p>
+        </div>
+        
+        <!-- Timestamp to Date -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Timestamp to Date Time</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="timestamp">
+                    Unix Timestamp
+                </label>
+                <div class="flex flex-col sm:flex-row">
+                    <input class="shadow appearance-none border rounded-t sm:rounded-l sm:rounded-t-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="timestamp" type="text" placeholder="Please enter Unix timestamp">
+                    <button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-b sm:rounded-r sm:rounded-b-none focus:outline-none focus:shadow-outline" type="button" data-target="#timestamp">
+                        Copy
+                    </button>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="datetime">
+                    Date Time
+                </label>
+                <div class="flex flex-col sm:flex-row">
+                    <input class="shadow appearance-none border rounded-t sm:rounded-l sm:rounded-t-none w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="datetime" type="text" placeholder="Converted date time" readonly>
+                    <button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-b sm:rounded-r sm:rounded-b-none focus:outline-none focus:shadow-outline" type="button" data-target="#datetime">
+                        Copy
+                    </button>
+                </div>
+            </div>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="convertToDatetime">
+                Convert
+            </button>
+        </div>
+        
+        <!-- Date to Timestamp -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Date Time to Timestamp</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="datetimeInput">
+                    Date Time
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="datetimeInput" type="datetime-local">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="timestampOutput">
+                    Unix Timestamp
+                </label>
+                <div class="flex">
+                    <input class="shadow appearance-none border rounded-l w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="timestampOutput" type="text" placeholder="Converted timestamp" readonly>
+                    <button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-r focus:outline-none focus:shadow-outline" type="button" data-target="#timestampOutput">
+                        Copy
+                    </button>
+                </div>
+            </div>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="convertToTimestamp">
+                Convert
+            </button>
+        </div>
+        
+        <!-- Real-time Timestamp -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4">Real-time Unix Timestamp</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="currentTimestamp">
+                    Current Timestamp
+                </label>
+                <div class="flex">
+                    <input class="shadow appearance-none border rounded-l w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="currentTimestamp" type="text" readonly>
+                    <button class="copy-btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-r focus:outline-none focus:shadow-outline" type="button" data-target="#currentTimestamp">
+                        Copy
+                    </button>
+                </div>
+            </div>
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="getCurrentTimestamp">
+                Get Current Timestamp
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
