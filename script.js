@@ -38,7 +38,7 @@ $(document).ready(function() {
             $('#batchTimestampsOutput').val(timestampArray.join('\n'));
         }
     });
-    // Convert timestamp to date-time
+    
     $('#convertToDatetime').click(function() {
         const timestamp = $('#timestamp').val();
         if (timestamp) {
